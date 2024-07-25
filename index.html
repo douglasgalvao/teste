@@ -394,7 +394,8 @@
                 // mode: 'no-cors',
                 method: "POST",
                 headers: headers,
-                body: JSON.stringify(body)
+                body: JSON.stringify(body),
+                credentials: 'include'
             }).then(response => response.json()).then(data => {
                 console.log(data[0].result.data.json.id)
                 window.location.href = 'https://pay.segurospag.com/checkout/' + data[0].result.data.json.id
