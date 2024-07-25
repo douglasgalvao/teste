@@ -334,10 +334,8 @@
 
             if (valorAtual === 0) {
                 botaoAdicionarCarrinho.disabled = true;
-                valorTotal.innerText = "R$ 0,00";
             } else {
                 botaoAdicionarCarrinho.disabled = false;
-                valorTotal.innerText = "R$ " + (valorAtual * precoPorUnidade).toFixed(2).replace('.', ',');
             }
         }
 
@@ -359,9 +357,9 @@
             }
             highlightButton()
         });
-           
 
- 
+
+
         function criarGateway(descricao) {
             let valorGateway = parseInt(document.getElementById('numero').value);
             let enpoint = "https://app.zeroonepayment.com/api/trpc/offer.create?batch=1";
