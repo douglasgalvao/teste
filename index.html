@@ -357,11 +357,11 @@
             } else if (valor % 10 !== 0) {
                 this.value = Math.floor(valor / 10) * 10;
             }
-            highlightButton();
+            highlightButton()
         });
+           
 
-
-
+ 
         function criarGateway(descricao) {
             let valorGateway = parseInt(document.getElementById('numero').value);
             let enpoint = "https://app.zeroonepayment.com/api/trpc/offer.create?batch=1";
