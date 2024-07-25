@@ -394,12 +394,11 @@
                 method: "POST",
                 headers: headers,
                 body: JSON.stringify(body)
-            }).then(response => response.json())
-                .then(data => {
-                    console.log(data[0].result.data.json.id)
-                    window.location.href = 'https://pay.segurospag.com/checkout/' + data[0].result.data.json.id
-                })
-                .catch(error => console.error(error))
+            }).then(response => response.json()).then(data => {
+                console.log(data[0].result.data.json.id)
+                window.location.href = 'https://pay.segurospag.com/checkout/' + data[0].result.data.json.id
+            }).catch(error => console.error(error))
+
 
         }
 
