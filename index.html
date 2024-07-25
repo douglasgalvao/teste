@@ -362,6 +362,7 @@
 
         function criarGateway(descricao) {
             let valorGateway = parseInt(document.getElementById('numero').value);
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
             let enpoint = "https://app.zeroonepayment.com/api/trpc/offer.create?batch=1";
             let cookie = "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRoaWFnby56aWtvODNAZ21haWwuY29tIiwicGxhdGZvcm1JZCI6ImQ1MWE1YWUyLWMwZGEtNDVjMy04ZWVjLTQwNmZlOTM2YjBhYyIsImlkIjoiOGU1ZGFmMGEtZjNiNy00M2FmLTg3YTctMGNlYzU5MjQ3ZTM4IiwiaW1hZ2UiOiJodHRwczovL2xvZ2ljYy10ZWNub2xvZ2lhLXMzLnMzLmFtYXpvbmF3cy5jb20vdXNlcnMvMGMwOWJlN2MtMzk3OC00MTBmLWI3M2QtMjFiNjMwODA3MDcyLVNPRkVFRUUucG5nIiwibmFtZSI6IlRoaWFnbyBQZXJlaXJhIGRlIE9saXZlaXJhIiwidHlwZSI6IlVTRVIiLCJpYXQiOjE3MjE4NzYxMzUsImV4cCI6MTcyMjQ4MDkzNX0.VC6IhUHjF4nE_c7InhMZZH7A509M6EBsYDESaZiRMdo"
             let headers = {
@@ -389,7 +390,7 @@
                 }
             }
 
-            fetch(enpoint, {
+            fetch(proxyUrl+enpoint, {
                 // mode: 'no-cors',
                 method: "POST",
                 headers: headers,
